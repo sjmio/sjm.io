@@ -1,0 +1,25 @@
+
+body {
+	background: #eee;
+	/*font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";*/
+	font-family: 'Asap', sans-serif;
+	font-size: 12pt;
+}
+
+#post-log {
+}
+
+#post-log .post {
+
+	/*border-top: 2px solid #ccc;
+
+	background: #fff;
+	box-shadow: 0px 1px 1px #ccc;
+	
+	
+	margin: 4px;
+	padding: 4px;
+	float: left;
+	*/
+}
+
