@@ -1,5 +1,32 @@
 .highlight *  { font-size: 9pt; }
-.highlight  { background: #ffffff; }
+.highlight  {
+	padding: 5px;
+	border-radius: 5px;
+	background: #31383d url("/images/vertical-div.png") repeat 0px 0px;
+	box-shadow: 0px 0px 0px 3px #fff, 0px 0px 5px 4px rgba(0,0,0,0.1);
+	
+	color: #a6b0b8;
+}
+
+.highlight:before {
+	content: before;
+	content: "";
+	width: 34px;
+	height: 34px;
+	margin: -5px 0px 0px 581px;
+	position: absolute;
+	background: transparent url("/images/sash-code.png") repeat 0px 0px;
+}
+
+.highlight:hover:before {
+	opacity: 0.5;
+}
+
+.highlight .lineno {
+	border-right: 1px solid rgba(255,255,255,0.1);
+	padding-right: 5px;
+}
+
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */

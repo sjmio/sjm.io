@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Formula for Circle from 3 Points
-tags:
+synopsis: TODO add synopsis
+topics:
   - algorithm
   - generative art
   - code
