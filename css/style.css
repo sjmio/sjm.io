@@ -1,10 +1,94 @@
 
+/*
+font-family: 'PT Serif', serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'PT Sans', sans-serif;
+*/
+
 body {
-	background: #eee;
-	/*font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";*/
-	font-family: 'Asap', sans-serif;
+	padding: 0px;
+	margin: 0px;
+	font-family: "PT Sans", sans-serif;
 	font-size: 12pt;
+	
+	/* background gradient */
+	background-image: linear-gradient(top, #c9d1d6 150px, #ebf0f2 300px);
+	background-image: -o-linear-gradient(top, #c9d1d6 150px, #ebf0f2 300px);
+	background-image: -moz-linear-gradient(top, #c9d1d6 150px, #ebf0f2 300px);
+	background-image: -webkit-linear-gradient(top, #c9d1d6 150px, #ebf0f2 300px);
+	background-image: -ms-linear-gradient(top, #c9d1d6 150px, #ebf0f2 300px);
+	background-color: #ebf0f2;
+	background-repeat: no-repeat;
 }
+
+
+
+.container {
+	width: 940px;
+	margin: 0px auto 0px auto;
+}
+
+#header {
+	font-family: "PT Serif", serif;
+	background: #292d30;
+	overflow: hidden;
+	width: 100%;
+	padding: 10px 0 10px 0;
+}
+
+#logo-area {
+	display: block;
+	text-decoration: none;
+	color: #71767a;
+	background: transparent url("/images/sjmio.png") no-repeat 3px 0px;
+	float: left;
+	padding: 0 15px 0 70px;
+	width: 215px;
+	margin-right: 12px;
+	font-size: 12px;
+	min-height: 35px;
+	line-height: 13px;
+}
+
+#logo-area:hover {
+	color: #a1a8af;
+}
+
+#header ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	line-height: 15px;
+}
+
+#header li {
+	width: 140px;
+	margin-right: 12px;
+	float: left;
+}
+	
+#header ul a {
+	display: block;
+	text-decoration: none;
+	color: #c3c3c3;
+	margin-top: -2px;
+	text-shadow: 1px 1px 0px #000;
+}
+
+#header ul a:hover {
+	color: #fff;
+}
+
+#header ul small {
+	display: block;
+	color: #71767a;
+	text-shadow: none
+}
+
+#header ul a:hover small {
+	color: #8f98a2;
+}
+
 
 #post-log {
 }

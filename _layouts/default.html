@@ -5,7 +5,7 @@
 	<meta name="author" content="Sean McNamara" />
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-	<link href="http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif|PT+Sans+Narrow|PT+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="/js/sjmio.js"></script>
@@ -14,15 +14,51 @@
 <body>
 
 <div id="header">
-	{% include navigation.ext %}
+	<div class="container">
+		<div id="logo-area" >
+			<a href="/">
+				Collective musings on &lt;code&gt;, #devops, {algorithm}, <i>generative art</i>, and&nbsp;<strike>randomness</strike>
+			</a>
+		</div>
+		{% include navigation.ext %}
+	</div>
+</div>
+
+<div id="sub-header">
+	<div class="container">
+		<div class="block-small">
+			<em>Follow Me:</em>
+			<br/><a href="http://github.com/sjmio">Github</a> / <a href="http://twitter.com/sjmio">@sjmio</a>
+		</div>
+		<div class="block-small">
+			<em>Contact:</em>
+			<br/><a href="mailto:speak@sjm.io">speak@sjm.io</a>
+		</div>
+		<div class="block-large">
+			<em>Popular Topics:</em>
+			<a href="/topics/#/code">Code</a>
+			<a href="/topics/#/tutorial">Tutorial</a>
+			<a href="/topics/#/genetic-algorithm">Genetic Algorithm</a>
+			<a href="/topics/#/generative-art">Generative Art</a>
+			<a href="/topics/#/graphics">Graphics</a>
+			<a href="/topics/#/devops">Devops</a>
+			<a href="/topics/#/tips">Tips</a>
+			<a href="/topics/#/puppet">Puppet</a>
+			<a href="/topics/#/fractals">Fractals</a>
+		</div>
+	</div>
 </div>
 
 <div id="content">
-{{ content }}
+	<div class="container">
+		{{ content }}
+	</div>
 </div>
 
 <div id="footer">
-	{% include navigation.ext %}
+	<div class="container">
+		{% include navigation.ext %}
+	</div>
 </div>
 
 </body>

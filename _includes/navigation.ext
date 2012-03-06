@@ -1,6 +1,7 @@
 
 <ul class="navigation">
-	<li><a href="/">Front</a></li>
-	<li><a href="/">Articles</a></li>
-	<li><a href="/">Categories</a></li>
+	<li><a href="/">Front Page<small>Home, sweet home</small></a></li>
+	<li><a href="/">Articles<small>High-level ramblings</small></a></li>
+	<li><a href="/">Playground<small>Technical bits</small></a></li>
+	<li><a href="/">About<small>Why sjm.io</small></a></li>
 </ul>
