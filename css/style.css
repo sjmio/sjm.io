@@ -277,6 +277,7 @@ body {
 .post {
 	width: 620px;
 	color: #4d565e;
+	line-height: 17pt;
 }
 
 .post a {
@@ -303,6 +304,62 @@ body {
 	color: #2e353b;
 	text-shadow: 1px 1px 0px #fff;
 }
+
+.post ul {
+	list-style: square;
+}
+
+.post li {
+	padding: 5px 0 5px 0;
+}
+
+
+code {
+	background-color: #fff;
+	box-shadow: 1px 1px 2px 0px rgba(41,45,48,0.2);
+	padding: 3px;
+	color: #222;
+	font-size: 9pt;
+}
+
+.post-div {
+	height: 1px;
+	border: none;
+	border-top: 1px dashed #bbb;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+
+/*.post-div:before {
+	z-index: -1;
+	content: "";
+	display: block;
+	height: 50px;
+	width: 100%;
+	position: absolute;
+	margin-top: -52px;
+	background-image: linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
+	background-image: -o-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
+	background-image: -moz-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
+	background-image: -webkit-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
+	background-image: -ms-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
+}*/
+
+.post-div:after {
+	content: "";
+	display: block;
+	height: 150px;
+	margin-top: 1px;
+	background-image: linear-gradient(top, #c9d1d6 50px, #ebf0f2 150px);
+	background-image: -o-linear-gradient(top, #c9d1d6 50px, #ebf0f2 150px);
+	background-image: -moz-linear-gradient(top, #c9d1d6 50px, #ebf0f2 150px);
+	background-image: -webkit-linear-gradient(top, #c9d1d6 50px, #ebf0f2 150px);
+	background-image: -ms-linear-gradient(top, #c9d1d6 50px, #ebf0f2 150px);
+}
+
+
 
 /*
 #post-log {

@@ -80,7 +80,7 @@ var OMG_Circles = {
 		{
 			for (var i=0;i<circles.length;++i)
 			{
-				ctx.strokeStyle = "#ff0000";
+				ctx.strokeStyle = "#c96d41";
 				ctx.beginPath();
 				ctx.arc(circles[i].circle.x,circles[i].circle.y,circles[i].circle.r,0,Math.PI*2,true);
 				ctx.closePath();
@@ -91,7 +91,7 @@ var OMG_Circles = {
 			{
 				for (var j=0;j<3;++j)
 				{
-					ctx.fillStyle = j == 1 ? "#00ff00" : "#0000ff";
+					ctx.fillStyle = j == 1 ? "#4f8821" : "#443447";
 					
 					var p = circles[i].vertices[j];
 					ctx.beginPath();
@@ -157,7 +157,7 @@ var OMG_Circles = {
 				
 				
 				
-				ctx.fillStyle = "rgba(255,0,0,0.9)";
+				ctx.fillStyle = "#4f8821";
 				ctx.beginPath();
 				ctx.arc(circles[i].circle.x,circles[i].circle.y,4,0,Math.PI*2,true);
 				ctx.closePath();
@@ -322,7 +322,7 @@ document.write("Circle centered at (" + x + ", " + y + ") with radius: " + r + "
 document.write("Equation (r^2 = x^2 + y^2): " + r + "^2 = " + x + "^2 + " + y + "^2");
 </script>
 
-Visualizing it helps too, so I whipped up a tiny HTML5/Canvas circle visualizer (called OMG_Circles if you care to view source). The blue/green dots are the input points that we pass into **circle3pt**. To help you get your bearings, the green dot is the middle point of the three.
+Visualizing it helps too, so I whipped up a tiny HTML5/Canvas circle visualizer (called OMG_Circles if you care to view source). The dots are the input points that we pass into **circle3pt**. To help you get your bearings, the green dot is the middle point of the three.
 
 <canvas id="example01" width="175" height="175">
 </canvas>
