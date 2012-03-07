@@ -284,6 +284,10 @@ body {
 	color: #4c9500;
 }
 
+strong {
+	color: #333;
+}
+
 .post a:hover {
 	color: #256336;
 }
@@ -328,6 +332,23 @@ code {
 	border-top: 1px dashed #bbb;
 	margin-top: 30px;
 	margin-bottom: 30px;
+}
+
+.continue-reading {
+	border-radius: 5px;
+	background-color: #c86d41;
+	color: #fffce1 !important;
+	text-decoration: none;
+	font-size: 14pt;
+	padding: 4px 12px;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1), 2px 2px 0px 0px #ced2d5;
+}
+
+.continue-reading:hover {
+	background: #333 url("/images/vertical-div.png") repeat 0px 0px;
+	color: #eee !important;
+	text-shadow: none;
 }
 
 

@@ -21,6 +21,7 @@ Installing and Configuring Jekyll itself isn't bad, just a matter of pulling in 
 * Bare git repository under 'deploy' user that automatically publishes when pushed
 * Install faster [LSI](http://en.wikipedia.org/wiki/Latent_semantic_indexing) dependencies for 'related posts' computation
 
+<!-- more -->
 
 ### Automated Jekyll Setup using Puppet
 

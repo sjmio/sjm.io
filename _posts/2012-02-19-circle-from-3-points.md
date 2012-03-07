@@ -311,6 +311,8 @@ document.write("Circle centered at (" + x + ", " + y + ") with radius: " + r + "
 document.write("Equation (r^2 = x^2 + y^2): " + r + "^2 = " + x + "^2 + " + y + "^2");
 {% endhighlight %}
 
+<!-- more -->
+
 Which outputs:
 
 <script type="text/javascript">

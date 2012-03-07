@@ -18,7 +18,7 @@ title: sjm.io
 					<strong>topics</strong>
 					<ul class="topics nobr">
 						{% for topic in post.topics %}
-							<li><a href="/topics/#!/{{ topic | downcase | replace:' ','_' }}">{{ topic | downcase | capitalize }}</a></li>
+							<li><a href="/topics/#!/{{ topic | downcase | replace:' ','-' }}">{{ topic | downcase | capitalize }}</a></li>
 						{% endfor %}
 					</ul>
 				
@@ -33,7 +33,12 @@ title: sjm.io
 				</div>
 			</div>
 			<div class="post">
-				{{ post.content }}
+				
+				{% capture sz %}{{ post.content | split:'<!-- more -->' | size }}{% endcapture %}
+				{{ post.content | split:'<!-- more -->' | first }}
+				{% if sz != "1" %}
+				<a class="continue-reading" href="{{ post.url }}#more">Read more &raquo;</a>
+				{% endif %}
 			</div>
 			<div style="clear: both;"></div>
 		</div>
