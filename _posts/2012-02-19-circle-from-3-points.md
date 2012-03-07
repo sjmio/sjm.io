@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formula for Circle from 3 Points
-synopsis: TODO add synopsis
+synopsis: Calculating the properties of a circle from 3 arbitrary points in space.
 topics:
   - algorithm
   - generative art
