@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="container content-header">
+	<h1>Topic <strong>&raquo;</strong> {{ page.tag | split:" " | map: "capitalize" | join: " " }}</h1>
+	{{ page.siblings | size }} post{% if page.siblings | size != 1 %}s{% endif %} matching &ldquo;{{ page.tag }}&rdquo;
+</div>
+
+
+<div id="posts">
+	<div class="container condensed">
+		{% for post in page.siblings %}
+			<div class="post-meta-container" >
+				<a class="post-title" href="{{ post.url }}">
+					<div class="post-title-inner">
+						<h1>{{ post.title }}</h1>
+						<div class="date">{{ post.date | date_to_string }}</div>
+						<div class="size">{{ post.content | size }} Bytes</div>
+					</div>
+				</a>
+				<div class="post-meta">
+					<strong>topics</strong>
+					<ul class="topics nobr">
+						{% for tag in post.tags %}
+							<li><a href="/topic/{{ tag | downcase | replace:' ','-' }}">{{ tag | downcase | capitalize }}</a></li>
+						{% endfor %}
+					</ul>
+					<strong>synopsis</strong>
+					<span>{{ post.synopsis }}</span>
+				</div>
+			</div>
+			
+			{% cycle '', '', '<hr/>' %}
+		{% endfor %}
+		<div style="clear: both;"></div>
+	</div>
+</div>

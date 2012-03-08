@@ -1,10 +1,31 @@
 ---
 layout: default
-title: sjm.io
+title: Welcome
 ---
 
+
+<div class="container content-header">
+	<div class="pagination">
+		{% if paginator.previous_page %}
+			<a href="{{paginator.previous_url}}" class="previous">&laquo; Previous</a>
+		{% endif %}
+		<span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+		{% if paginator.next_page %}
+			<a href="{{paginator.next_url}}" class="next ">Next &raquo;</a>
+		{% endif %}
+	</div>
+	{% if page.url == "/index.html" %}
+		<h1>Welcome :)</h1>
+		http://sjm.io/
+	{% else %}
+		<h1>Archives</h1>
+		http://sjm.io/
+	{% endif %}
+</div>
+
+
 <div id="posts">
-	{% for post in site.posts %}
+	{% for post in paginator.posts %}
 		<div class="container">
 			<div class="post-meta-container" >
 				<a class="post-title" href="{{ post.url }}">
@@ -17,14 +38,14 @@ title: sjm.io
 				<div class="post-meta">
 					<strong>topics</strong>
 					<ul class="topics nobr">
-						{% for topic in post.topics %}
-							<li><a href="/topics/#!/{{ topic | downcase | replace:' ','-' }}">{{ topic | downcase | capitalize }}</a></li>
+						{% for tag in post.tags %}
+							<li><a href="/topic/{{ tag | downcase | replace:' ','-' }}">{{ tag | downcase | capitalize }}</a></li>
 						{% endfor %}
 					</ul>
-				
+			
 					<strong>synopsis</strong>
 					<span>{{ post.synopsis }}</span>
-				
+			
 					<strong>miscellaneous</strong>
 					<ul class="topics">
 						<li><a href="{{ post.url }}#comments">Comments</a></li>
@@ -33,7 +54,6 @@ title: sjm.io
 				</div>
 			</div>
 			<div class="post">
-				
 				{% capture sz %}{{ post.content | split:'<!-- more -->' | size }}{% endcapture %}
 				{{ post.content | split:'<!-- more -->' | first }}
 				{% if sz != "1" %}
@@ -46,4 +66,17 @@ title: sjm.io
 		<hr class="post-div" />
 		{% endif %}
 	{% endfor %}
+</div>
+
+
+<div class="container content-footer">
+	<div class="pagination">
+		{% if paginator.previous_page %}
+			<a href="{{paginator.previous_url}}" class="previous">&laquo; Previous</a>
+		{% endif %}
+		<span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+		{% if paginator.next_page %}
+			<a href="{{paginator.next_url}}" class="next ">Next &raquo;</a>
+		{% endif %}
+	</div>
 </div>

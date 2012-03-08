@@ -100,6 +100,25 @@ body {
 	color: #8f98a2;
 }
 
+.content-header, .content-footer {
+	color: #7a848f;
+	font-size: 11pt;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.content-header h1 {
+	font-size: 25pt;
+	color: #353c44;
+	text-shadow: 1px 1px 0px rgba(255,255,255,0.7);
+	margin: 0px 0px -5px 0px;
+	padding: 0px;
+}
+
+.content-header strong {
+	color: #626e7b;
+}
+
 
 /* sub-header */
 
@@ -236,13 +255,13 @@ body {
 }
 
 #posts .post-meta strong {
-	
 	font-weight: normal;
 	color: #7e7e7e;
 	margin-top: 20px;
-	padding-left: 8px;
-	display: block;
-	background: transparent url("/images/arrow.png") no-repeat 0px 6px;
+	padding-right: 8px;
+	display: inline-block;
+	background: transparent url("/images/arrow.png") no-repeat right 6px;
+	margin-right: 100%;
 }
 
 #posts .post-meta ul {
@@ -326,47 +345,33 @@ code {
 	font-size: 9pt;
 }
 
-.post-div {
-	height: 1px;
-	border: none;
-	border-top: 1px dashed #bbb;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
 .continue-reading {
 	border-radius: 5px;
-	background-color: #c86d41;
+	background-color: #c76b3f;
+	
 	color: #fffce1 !important;
 	text-decoration: none;
 	font-size: 14pt;
 	padding: 4px 12px;
-	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
-	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1), 2px 2px 0px 0px #ced2d5;
+	text-shadow: -1px -1px 0px rgba(0,0,0,0.2);
+	box-shadow: inset 0px 0px 10px 0px #cd814b, 1px 2px 0px 0px #9b421e, inset 0px 0px 0px 1px rgba(139,40,0,0.4);
 }
 
 .continue-reading:hover {
+	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1), 1px 2px 0px 0px #000;
 	background: #333 url("/images/vertical-div.png") repeat 0px 0px;
 	color: #eee !important;
 	text-shadow: none;
 }
 
-
-
-/*.post-div:before {
-	z-index: -1;
-	content: "";
-	display: block;
-	height: 50px;
-	width: 100%;
-	position: absolute;
-	margin-top: -52px;
-	background-image: linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
-	background-image: -o-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
-	background-image: -moz-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
-	background-image: -webkit-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
-	background-image: -ms-linear-gradient(bottom, #c9d1d6 0px, #ebf0f2 50px);
-}*/
+.post-div {
+	height: 0px;
+	border: none;
+	/*border-top: 1px dashed #bbb;
+	margin-top: 30px;
+	margin-bottom: 30px;*/
+	padding: 30px 0;
+}
 
 .post-div:after {
 	content: "";
@@ -380,23 +385,74 @@ code {
 	background-image: -ms-linear-gradient(top, #c9d1d6 50px, #ebf0f2 150px);
 }
 
-
-
-/*
-#post-log {
+.post-div:before {
+	content: "";
+	display: block;
+	height: 150px;
+	margin-top: -151px;
+	background-image: linear-gradient(top, rgba(225,225,225,0) 50px, #fff 150px);
+	background-image: -o-linear-gradient(top, rgba(225,225,225,0) 50px, #fff 150px);
+	background-image: -moz-linear-gradient(top, rgba(225,225,225,0) 50px, #fff 150px);
+	background-image: -webkit-linear-gradient(top, rgba(225,225,225,0) 50px, #fff 150px);
+	background-image: -ms-linear-gradient(top, rgba(225,225,225,0) 50px, #fff 150px);
 }
 
-#post-log .post {
-*/
-	/*border-top: 2px solid #ccc;
-
-	background: #fff;
-	box-shadow: 0px 1px 1px #ccc;
-	
-	
-	margin: 4px;
-	padding: 4px;
-	float: left;
-	*/
+.condensed .post-meta-container {
+	margin-bottom: 20px;
 }
+
+.condensed .post-meta-container:nth-child(4n+3) { /* 4n+3 because of .condensed hr */
+	margin-right: 0px !important;
+}
+
+.condensed hr {
+	height: 0px;
+	margin-bottom: 28px;
+	border-bottom: 1px dashed rgba(255,255,255,0.5);
+	border-top: 1px dashed rgba(0,0,0,0.2);
+	display: block;
+	clear: both;
+}
+
+.pagination {
+	float: right;
+	font-size: 14pt;
+	padding-right: 2px;
+}
+
+.content-header .pagination {
+	border-bottom: 1px dashed rgba(0,0,0,0.15);
+	padding-bottom: 15px;
+	margin-top: 15px;
+}
+
+.content-footer .pagination {
+	border-top: 1px dashed rgba(0,0,0,0.15);
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+.pagination .page_number {
+	padding: 0px 10px;
+	text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+}
+
+.pagination a {
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #fff;
+	padding: 3px 12px;
+	color: #3a4149;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 6px;
+	box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,0.7), 1px 2px 0px 0px rgba(0,0,0,0.1), inset 0px -1px 0px 0px rgba(0,0,0,0.4);
+}
+
+.pagination a:hover {
+	background: #333 url("/images/vertical-div.png");
+	text-shadow: none;
+	box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+	color: #fff;
+}
+
+
 

@@ -2,7 +2,7 @@
 layout: post
 title: Introducing Jekyll-Puppet
 synopsis: Using configuration management tool Puppet to automate Jekyll installations.
-topics:
+tags:
   - jekyll
   - puppet
   - automation
