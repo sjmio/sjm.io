@@ -37,7 +37,19 @@ body {
 	overflow: hidden;
 	width: 100%;
 	padding: 10px 0 18px 0;
+	margin-top: 7px;
 	border-top: 3px solid rgba(0,0,0,0.15);
+}
+
+#header:before {
+	content: "";
+	display: block;
+	background: #000;
+	height: 6px;
+	border-bottom: 1px dashed #444;
+	position: absolute;
+	top: 0px;
+	width: 100%;
 }
 
 #logo-area {
@@ -147,6 +159,7 @@ body {
 
 #sub-header em {
 	font-style: normal;
+	margin-right: 3px;
 }
 
 #sub-header .block-small, #sub-header .block-large {
@@ -178,7 +191,7 @@ body {
 }
 
 .block-large .popular-tags li a {
-	padding: 0px 6px;
+	padding: 1px 8px;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
