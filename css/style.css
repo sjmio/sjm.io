@@ -165,6 +165,24 @@ body {
 	width: 620px;
 }
 
+.block-large .popular-tags {
+	text-decoration: none;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.block-large .popular-tags li {
+	display: inline-block;
+	margin: 0px 7px 7px 0px;
+}
+
+.block-large .popular-tags li a {
+	padding: 0px 6px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
 
 /* posts */
 

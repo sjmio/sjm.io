@@ -6,6 +6,7 @@ tags:
   - jekyll
   - puppet
   - automation
+  - code
 ---
 [Jekyll](http://jekyllrb.com/) is lightweight CMS platform (static content generator, technically speaking) that is very well in-tune with how devs think and work. I was experimenting with it one night and was really quite taken by it. I've since rolled this site into it.
 
