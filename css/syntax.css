@@ -8,6 +8,7 @@
 	box-shadow: none;
 	color: #a6b0b8;
 	padding: 0px;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 .highlight *  { font-size: 9pt; }

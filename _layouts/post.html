@@ -12,30 +12,32 @@ layout: default
 
 <div id="posts">
 	<div class="container">
-		<div class="post-meta-container" >
-			<a class="post-title" href="{{ page.url }}">
-				<div class="post-title-inner">
-					<h1>{{ page.title }}</h1>
-					<div class="date">{{ page.date | date_to_string }}</div>
-					<div class="size">{{ page.content | size }} Bytes</div>
+		<div id="sticky-container">
+			<div class="post-meta-container" >
+				<a class="post-title" href="{{ page.url }}">
+					<div class="post-title-inner">
+						<h1>{{ page.title }}</h1>
+						<div class="date">{{ page.date | date_to_string }}</div>
+						<div class="size">{{ page.content | size }} Bytes</div>
+					</div>
+				</a>
+				<div class="post-meta">
+					<strong>topics</strong>
+					<ul class="topics nobr">
+						{% for tag in page.tags %}
+							<li><a href="/topic/{{ tag | downcase | replace:' ','-' }}">{{ tag | downcase | capitalize }}</a></li>
+						{% endfor %}
+					</ul>
+		
+					<strong>synopsis</strong>
+					<span>{{ page.synopsis }}</span>
+		
+					<strong>miscellaneous</strong>
+					<ul class="topics">
+						<li><a href="{{ page.url }}#comments">Comments</a></li>
+						<li><a href="{{ page.url }}">Permalink</a></li>
+					</ul>
 				</div>
-			</a>
-			<div class="post-meta">
-				<strong>topics</strong>
-				<ul class="topics nobr">
-					{% for tag in page.tags %}
-						<li><a href="/topic/{{ tag | downcase | replace:' ','-' }}">{{ tag | downcase | capitalize }}</a></li>
-					{% endfor %}
-				</ul>
-		
-				<strong>synopsis</strong>
-				<span>{{ page.synopsis }}</span>
-		
-				<strong>miscellaneous</strong>
-				<ul class="topics">
-					<li><a href="{{ page.url }}#comments">Comments</a></li>
-					<li><a href="{{ page.url }}">Permalink</a></li>
-				</ul>
 			</div>
 		</div>
 		<div class="post">
@@ -43,15 +45,7 @@ layout: default
 		</div>
 		<div style="clear: both;"></div>
 	</div>
-</div>
-
-<div id="related">
-	<h2>Related Posts</h2>
-	<ul class="posts">
-	{% for post in site.related_posts limit:3 %}
-		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-	</ul>
+	<hr class="post-div" />
 </div>
 
 

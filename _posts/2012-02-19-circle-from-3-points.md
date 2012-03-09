@@ -8,7 +8,7 @@ tags:
   - code
 ---
 
-It goes like this--You have 3 points and you want to solve for a circle whose permitter runs through each point.  I've used this nifty way of defining a circle on two separate projects in the past.  One was for a game I was making, and the other was for an interactive visualization. You're probably more interested in dropping it into your own code, vs. understanding all the nitty-gritty maths of how it works. So I'll spare you those details.  See the examples below to view it in action and to help you get ideas flowing.
+It goes like this--You have 3 points and you want the equation of a circle whose permitter runs through each of the points.  This is a nifty way to define a circle, something I've used on two projects in the past.  You're probably more interested in dropping it into your own code, So I'll spare you the mathy details.  See the examples below to view it in action.
 
 <script type="text/javascript">
 
@@ -252,24 +252,20 @@ $(function ()
 	}
 	
 	
+	// single circle
 	OMG_Circles.create("#example01", example01_generator, OMG_Circles.style.plain);
 	
+	// example circles
 	OMG_Circles.create("#example02_plain", example02_generator, OMG_Circles.style.plain);
 	OMG_Circles.create("#example02_shaded", example02_generator, OMG_Circles.style.shaded);
 	OMG_Circles.create("#example02_line", example02_generator, OMG_Circles.style.line);
-	
-	OMG_Circles.create("#example03_plain", example03_generator, OMG_Circles.style.plain);
 	OMG_Circles.create("#example03_shaded", example03_generator, OMG_Circles.style.shaded);
-	OMG_Circles.create("#example03_line", example03_generator, OMG_Circles.style.line);
-	
-	OMG_Circles.create("#example04_plain", example04_generator, OMG_Circles.style.plain);
-	OMG_Circles.create("#example04_shaded", example04_generator, OMG_Circles.style.shaded);
-	OMG_Circles.create("#example04_line", example04_generator, OMG_Circles.style.line);
 });
 
 </script>
 
-### Jumping into Code
+Jumping into Code
+-----------------
 
 This is my Javascript implementation of the algorithm. The function **circle3pt** takes three points in two-dimensional space, and from those points algorithmically calculates the properties of the circle we want. If there isn't a solution to the inputs--like feeding it a straight line, **something a circle couldn't possibly fit**--the function will return false.  Otherwise it returns these properties about our circle:
 
@@ -329,29 +325,27 @@ Visualizing it helps too, so I whipped up a tiny HTML5/Canvas circle visualizer 
 <canvas id="example01" width="175" height="175">
 </canvas>
 
-### More Examples
+Examples
+--------
 
 _We can go nuts and have fun with it too!_ It's very easy to create interesting spacial and color dynamics. All of it based off the 3 inputs to **circle3pt** and a little iteration.  Throw in a sinusoidal function or two and bam, unusual patterns start emerging all over the place and things really come to life.  For the curious adventurer types- all the code that is generating these visualizations is done inline of this page, so just view the source.
 
-#### Visualization 1
+### Visualizations
 
 <canvas id="example02_plain" width="300" height="400">
 </canvas><canvas id="example02_shaded" width="300" height="400">
 </canvas><canvas id="example02_line" width="300" height="400">
-</canvas>
-
-#### Visualization 2
-
-<canvas id="example03_plain" width="300" height="400">
 </canvas><canvas id="example03_shaded" width="300" height="400">
-</canvas><canvas id="example03_line" width="300" height="400">
 </canvas>
 
-#### Visualization 3
 
-<canvas id="example04_plain" width="300" height="400">
-</canvas><canvas id="example04_shaded" width="300" height="400">
-</canvas><canvas id="example04_line" width="300" height="400">
-</canvas>
+### Visualization Code
+
+{% highlight javascript linenos %}
+OMG_Circles.create("#example02_plain", example02_generator, OMG_Circles.style.plain);
+OMG_Circles.create("#example02_shaded", example02_generator, OMG_Circles.style.shaded);
+OMG_Circles.create("#example02_line", example02_generator, OMG_Circles.style.line);
+OMG_Circles.create("#example03_shaded", example03_generator, OMG_Circles.style.shaded);
+{% endhighlight %}
 
 

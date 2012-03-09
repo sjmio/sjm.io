@@ -1,7 +1,7 @@
 
 <ul class="navigation">
 	<li><a href="/">Front Page<small>Home, sweet home</small></a></li>
-	<li><a href="/">Articles<small>High-level ramblings</small></a></li>
-	<li><a href="/">Playground<small>Technical bits</small></a></li>
-	<li><a href="/">About<small>Why sjm.io</small></a></li>
+	<li><a href="/">About Me<small>Why sjm.io</small></a></li>
+	<li><a href="/">Github<small>Where I hack</small></a></li>
+	<li><a href="/">Twitter<small>Making shit up</small></a></li>
 </ul>
