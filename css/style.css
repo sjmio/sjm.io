@@ -306,7 +306,9 @@ body {
 }
 
 #posts .post-meta {
+	margin-top: 3px;
 	-webkit-font-smoothing: subpixel-antialiased;
+	background-color: #ebf0f2;
 }
 
 #posts .post-meta strong {
