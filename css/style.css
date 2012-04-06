@@ -400,7 +400,7 @@ body {
 
 code {
 	background-color: #fff;
-	box-shadow: 1px 1px 2px 0px rgba(41,45,48,0.2);
+	box-shadow: 1px 1px 2px 0px rgba(41,45,48,0.2), inset 1px 1px 0px 0px #fff;
 	padding: 3px;
 	color: #222;
 	font-size: 9pt;
@@ -476,18 +476,6 @@ code {
 	clear: both;
 }
 
-.pagination {
-	float: right;
-	font-size: 14pt;
-	padding-right: 2px;
-}
-
-.content-header .pagination {
-	border-bottom: 1px dashed rgba(0,0,0,0.15);
-	padding-bottom: 15px;
-	margin-top: 15px;
-}
-
 .content-footer {
 	color: #7a848f;
 	font-size: 11pt;
@@ -496,32 +484,32 @@ code {
 	margin-bottom: -44px;
 }
 
-.content-footer .pagination {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.pagination .page_number {
-	padding: 0px 10px;
-	text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
-}
-
 .pagination a {
+	position: fixed;
+	display: block;
+	padding: 5px;
+	background-color: #23262b;
+	color: #fff;
 	text-decoration: none;
-	text-shadow: 1px 1px 0px #fff;
-	padding: 3px 12px;
-	color: #3a4149;
-	background-color: rgba(255,255,255,0.3);
-	border-radius: 6px;
-	box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,0.7), 1px 2px 0px 0px rgba(0,0,0,0.1), inset 0px -1px 0px 0px rgba(0,0,0,0.4);
+	top: 50%;
+	font-size: 14pt;
 }
 
-.pagination a:hover {
-	background: #333 url("/images/vertical-div.png");
-	text-shadow: none;
-	box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
-	color: #fff;
+.pagination span {
+	display: none;
 }
+
+.pagination .previous {
+	right: 0px;
+}
+
+.pagination a:hover span {
+	display: inline;
+}
+
+
+
+
 
 /* footer */
 #footer {

@@ -2,12 +2,18 @@
 layout: default
 ---
 
-{% if page.previous %} 
-	<a rel="prev" href="{{ page.previous.url }}">&larr; Older</a>
-{% endif %}
-{% if page.next %} 
-	<a rel="next" href="{{ page.next.url }}">Newer &rarr;</a>
-{% endif %}
+
+
+<div class="pagination">
+	{% if page.previous %} 
+		<a href="{{ page.previous.url }}" class="next ">&laquo;<span> {{ page.previous.title }}</span></a>
+	{% endif %}
+	{% if page.next %}
+		<a href="{{ page.next.url }}" class="previous"><span>{{ page.next.title }} </span>&raquo;</a>
+	{% endif %}
+</div>
+
+
 
 
 <div id="posts">
@@ -42,6 +48,22 @@ layout: default
 		</div>
 		<div class="post">
 			{{ content | replace_first: '<!-- more -->','<a name="more"></a>' }}
+		</div>
+		<div class="comments">
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				var disqus_shortname = 'sjmio';
+
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 		</div>
 		<div style="clear: both;"></div>
 	</div>

@@ -303,8 +303,7 @@ var circle = circle3pt({x: 100, y: 150},{x: 50, y: 35},{x: 75, y: 25});
 var r = precision(circle.r, 2);
 var x = precision(circle.x, 2);
 var y = precision(circle.y, 2);
-document.write("Circle centered at (" + x + ", " + y + ") with radius: " + r + ". ");
-document.write("Equation (r^2 = x^2 + y^2): " + r + "^2 = " + x + "^2 + " + y + "^2");
+document.write("Circle centered at (" + x + ", " + y + ") with radius: " + r);
 {% endhighlight %}
 
 <!-- more -->
@@ -316,8 +315,7 @@ var circle = circle3pt({x: 100, y: 150},{x: 50, y: 35},{x: 75, y: 25});
 var r = precision(circle.r, 2);
 var x = precision(circle.x, 2);
 var y = precision(circle.y, 2);
-document.write("Circle centered at (" + x + ", " + y + ") with radius: " + r + ". ");
-document.write("Equation (r^2 = x^2 + y^2): " + r + "^2 = " + x + "^2 + " + y + "^2");
+document.write("Circle centered at (" + x + ", " + y + ") with radius: " + r);
 </script>
 
 Visualizing it helps too, so I whipped up a tiny HTML5/Canvas circle visualizer (called OMG_Circles if you care to view source). The dots are the input points that we pass into **circle3pt**. To help you get your bearings, the green dot is the middle point of the three.

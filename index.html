@@ -3,16 +3,17 @@ layout: default
 title: Welcome
 ---
 
+
+<div class="pagination">
+	{% if paginator.next_page %}
+		<a href="{{paginator.next_url}}" class="next ">&laquo;<span> Older Posts</span></a>
+	{% endif %}
+	{% if paginator.previous_page %}
+		<a href="{{paginator.previous_url}}" class="previous"><span>Newer Posts </span>&raquo;</a>
+	{% endif %}
+</div>
+
 <div class="container content-header">
-	<div class="pagination">
-		{% if paginator.next_page %}
-			<a href="{{paginator.next_url}}" class="next ">&laquo; Older Posts</a>
-		{% endif %}
-		<span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
-		{% if paginator.previous_page %}
-			<a href="{{paginator.previous_url}}" class="previous">Newer Posts &raquo;</a>
-		{% endif %}
-	</div>
 	{% if page.url == "/index.html" %}
 		<h1>Welcome :)</h1>
 		http://sjm.io/
@@ -21,6 +22,10 @@ title: Welcome
 		http://sjm.io/
 	{% endif %}
 </div>
+
+
+
+
 
 
 <div id="posts">
@@ -65,15 +70,3 @@ title: Welcome
 	{% endfor %}
 </div>
 
-
-<div class="container content-footer">
-	<div class="pagination">
-		{% if paginator.next_page %}
-			<a href="{{paginator.next_url}}" class="next ">&laquo; Older Posts</a>
-		{% endif %}
-		<span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
-		{% if paginator.previous_page %}
-			<a href="{{paginator.previous_url}}" class="previous">Newer Posts &raquo;</a>
-		{% endif %}
-	</div>
-</div>
