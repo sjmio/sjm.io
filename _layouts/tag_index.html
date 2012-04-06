@@ -11,7 +11,7 @@ layout: default
 <div id="posts">
 	<div class="container condensed">
 		{% for post in page.siblings %}
-			<div class="post-meta-container" >
+			<div class="post-meta-container sash-{{ post.sash }}" >
 				<a class="post-title" href="{{ post.url }}">
 					<div class="post-title-inner">
 						<h1>{{ post.title }}</h1>

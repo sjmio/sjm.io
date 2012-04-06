@@ -279,9 +279,45 @@ body {
 	height: 96px;
 	margin: -20px 0px 0px 200px;
 	position: absolute;
-	background: transparent url("/images/sash-article.png") no-repeat 0px 0px;
 	opacity: 0.97;
 }
+
+#posts .post-meta-container.sash-article h1:before {
+	background: transparent url("/images/sash-article.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-opinion h1:before {
+	background: transparent url("/images/sash-opinion.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-algorithm h1:before {
+	background: transparent url("/images/sash-algorithm.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-misc h1:before {
+	background: transparent url("/images/sash-misc.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-nerd h1:before {
+	background: transparent url("/images/sash-nerd.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-project h1:before {
+	background: transparent url("/images/sash-project.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-rant h1:before {
+	background: transparent url("/images/sash-rant.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-software h1:before {
+	background: transparent url("/images/sash-software.png") no-repeat 0px 0px;	
+}
+
+#posts .post-meta-container.sash-tutorial h1:before {
+	background: transparent url("/images/sash-tutorial.png") no-repeat 0px 0px;	
+}
+
 
 #posts .post-meta-container .post-title:hover h1:before {
 	opacity: 0.88;
@@ -550,5 +586,23 @@ code {
 	border-top: 1px dashed rgba(0,0,0,0.15);
 	font-size: 10pt;
 	color: #8c98a1;
+}
+
+/* comments */
+
+#disqus_thread {
+	color: #373e46;
+}
+
+#disqus_thread .dsq-trackback-url {
+	display: none;
+}
+
+.dsq-brlink {
+	display: none;
+}
+
+#disqus_thread a {
+	color: #444;
 }
 

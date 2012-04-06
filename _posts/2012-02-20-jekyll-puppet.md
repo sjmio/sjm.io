@@ -1,5 +1,6 @@
 ---
 layout: post
+sash: tutorial
 title: Introducing Jekyll-Puppet
 synopsis: Using configuration management tool Puppet to automate Jekyll installations.
 tags:

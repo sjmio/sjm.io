@@ -16,9 +16,9 @@ module Jekyll
       self.data['siblings'] = Array.new
       site.posts.each do |post|
         post.data['tags'].each do |t|
-          #if t == tag
+          if t == tag
             self.data['siblings'] << post
-          #end
+          end
         end
       end
     end
