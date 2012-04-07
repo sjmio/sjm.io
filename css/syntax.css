@@ -17,7 +17,7 @@
 	margin: 30px 0px;
 	padding: 5px;
 	border-radius: 5px;
-	background: #31383d url("/images/vertical-div.png") repeat 0px 0px;
+	background: #31383d url("/images/highlight-bg.png") repeat 0px 0px;
 	box-shadow: 0px 0px 0px 3px #fff, 0px 0px 7px 4px rgba(41,45,48,0.2), inset 0px 0px 0px 1px rgba(0,0,0,0.3), inset 0px 0px 0px 3px rgba(0,0,0,0.2);
 	
 	color: #a6b0b8;

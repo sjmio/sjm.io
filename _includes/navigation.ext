@@ -1,7 +1,7 @@
 
 <ul class="navigation">
 	<li><a href="/">Front Page<small>Home, sweet home</small></a></li>
-	<li><a href="/projects/">Projects<small>What I hack on</small></a></li>
+	<li><a href="/projects/">Projects<small>What I'm hacking on</small></a></li>
 	<li><a href="http://github.com/sjmio">Github<small>Where I hack</small></a></li>
-	<li><a href="/about/">About<small>Why sjm.io</small></a></li>
+	<li><a href="/about/">About Me<small>Why sjm.io</small></a></li>
 </ul>

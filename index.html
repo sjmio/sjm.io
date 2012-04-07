@@ -6,16 +6,16 @@ title: Welcome
 
 <div class="pagination">
 	{% if paginator.next_page %}
-		<a href="{{paginator.next_url}}" class="next ">&laquo;<span> Older Posts</span></a>
+		<a rel="prev" href="{{paginator.next_url}}" class="next ">&laquo;<span> Older Posts</span></a>
 	{% endif %}
 	{% if paginator.previous_page %}
-		<a href="{{paginator.previous_url}}" class="previous"><span>Newer Posts </span>&raquo;</a>
+		<a rel="next" href="{{paginator.previous_url}}" class="previous"><span>Newer Posts </span>&raquo;</a>
 	{% endif %}
 </div>
 
 <div class="container content-header">
 	{% if page.url == "/index.html" %}
-		<h1>Welcome :)</h1>
+		<h1>Welcome</h1>
 		http://sjm.io/
 	{% else %}
 		<h1>Archives</h1>
