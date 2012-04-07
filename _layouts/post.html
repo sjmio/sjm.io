@@ -31,7 +31,7 @@ layout: default
 					<strong>topics</strong>
 					<ul class="topics nobr">
 						{% for tag in page.tags %}
-							<li><a href="/topic/{{ tag | downcase | replace:' ','-' }}">{{ tag | downcase | capitalize }}</a></li>
+							<li><a href="/topic/{{ tag | downcase | replace:' ','-' }}">{{ tag | downcase | split:" " | map: "capitalize" | join: " " }}</a></li>
 						{% endfor %}
 					</ul>
 		
